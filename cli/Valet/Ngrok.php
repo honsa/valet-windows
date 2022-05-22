@@ -33,7 +33,7 @@ class Ngrok
     }
 
     /**
-     * @param  string $command
+     * @param  string  $command
      * @return void
      */
     public function run(string $command)
@@ -45,8 +45,8 @@ class Ngrok
 
     /**
      * @param  string  $domain
-     * @param  int $port
-     * @param  array $options
+     * @param  int  $port
+     * @param  array  $options
      * @return void
      */
     public function start(string $domain, int $port, array $options = [])
@@ -118,6 +118,6 @@ Then use: valet ngrok authtoken my-token');
      */
     protected function hasAuthToken(): bool
     {
-        return file_exists('~/.ngrok2/ngrok.yml');
+        return file_exists($_SERVER['HOME'].'/.ngrok2/ngrok.yml');
     }
 }
